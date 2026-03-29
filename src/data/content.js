@@ -16,76 +16,71 @@ const content = {
 
   // ----------------------------------------------------------
   //  BUSINESS INFO
-  //  Used in: Nav, Hero, About, Footer
+  //  Used in: Nav, Hero, About, Contact, Footer
   // ----------------------------------------------------------
   business: {
     name:      "Your Business",       // e.g. "Kedai Gunting Azri"
     nameAccent:"Name",                // The word you want in brand colour
     tagline:   "Your tagline here",   // e.g. "Fresh cuts, great vibes"
     city:      "Kuala Lumpur",        // e.g. "Petaling Jaya"
+    country:   "Malaysia",            // e.g. "Singapore" or "Malaysia"
     founded:   "2021",                // Year you started
     email:     "hello@yourbiz.com",   // Your email address
 
     // ----------------------------------------------------------
     //  LOGO
-    //  Option A — Image logo (recommended if you have one)
-    //    1. Drag your logo file into the /images/ folder
-    //    2. Set logo to your filename, e.g. "images/logo.png"
-    //    3. Recommended: PNG with transparent background, height ~40px
+    //  Option A — Image logo:
+    //    1. Drag your logo into the /images/ folder
+    //    2. Set logo: "images/logo.png"
     //
-    //  Option B — Text logo (default, no image needed)
-    //    Leave logo as "" and your business name shows instead,
-    //    with nameAccent highlighted in your brand colour.
+    //  Option B — Text logo (default):
+    //    Leave logo: "" — your business name shows instead
     // ----------------------------------------------------------
     logo:       "",                   // e.g. "images/logo.png" or leave ""
-    logoAlt:    "Your Business logo", // Screen reader description of logo
-    logoHeight: 36,                   // Logo display height in pixels
+    logoAlt:    "Your Business logo",
+    logoHeight: 36,
 
-    // WhatsApp number — digits only, start with country code
-    // Malaysia example: 60123456789 (no + sign, no spaces)
+    // WhatsApp: digits only, country code first, no + or spaces
+    // Malaysia: 60123456789  |  Singapore: 6591234567
     whatsapp:  "60123456789",
-
-    // The message that pre-fills when someone taps WhatsApp
     whatsappMessage: "Hi! I found your website and I'd like to know more.",
   },
 
   // ----------------------------------------------------------
-  //  HERO SECTION
-  //  The first thing visitors see
+  //  HERO SECTION — the first thing visitors see
   // ----------------------------------------------------------
   hero: {
-    badge:       "Now accepting new clients",  // Small pill text above headline
-    headline:    "We help businesses",         // First line of big headline
-    headlineEm:  "Your tagline here",          // Second line — shown in brand colour
-    subtext:     "We deliver professional, reliable service to clients across [YOUR CITY]. Tell us what you need — we'll make it happen.",
+    badge:        "Now accepting new clients",  // Pill text above headline
+    headline:     "We help businesses",         // First line of big headline
+    headlineEm:   "Your tagline here",          // Second line — in brand colour
+    subtext:      "We deliver professional, reliable service to clients. Tell us what you need — we'll make it happen.",
 
-    // Call-to-action buttons
-    ctaPrimary:  "Get a Free Quote",           // Main button — links to WhatsApp
-    ctaSecondary:"See Our Services",           // Secondary button — scrolls to services
+    ctaPrimary:   "Get a Free Quote",           // Main button → links to WhatsApp
+    ctaSecondary: "See Our Services",           // Secondary button → scrolls down
 
-    // Stats row — change numbers and labels to match your business
+    // ----------------------------------------------------------
+    //  STATS ROW — 3 numbers shown below the hero buttons
+    //  Change the number and label to match your business
+    // ----------------------------------------------------------
     stats: [
-      { number: "120+", label: "Happy clients" },
-      { number: "5★",   label: "Average rating" },
-      { number: "3yr",  label: "In business" },
+      { number: "120+", label: "Projects delivered" },  // e.g. "50+", "Projects delivered"
+      { number: "5★",   label: "Client satisfaction" }, // e.g. "5★", "Client satisfaction"
+      { number: "2021", label: "Founded" },             // e.g. "2021", "Founded"
     ],
   },
 
   // ----------------------------------------------------------
   //  ABOUT SECTION
-  //  Tell your story
   // ----------------------------------------------------------
   about: {
-    ownerName:   "Your Name",         // Your name or team name
-    headline:    "We care about your results",
-    subtext:     "Hi, I'm [YOUR NAME]. I started [BUSINESS NAME] because I believe every business deserves quality service without the hassle. Based in [YOUR CITY], we work with clients who value reliability and results.",
+    ownerName:  "Your Name",
+    headline:   "We care about your results",
+    subtext:    "Hi, I'm [YOUR NAME]. I started [BUSINESS NAME] because I believe every business deserves quality service without the hassle. Based in [YOUR CITY], we work with clients who value reliability and results.",
 
-    // Floating badge on the photo
-    badgeIcon:   "⭐",
-    badgeText:   "Trusted since 2021",
-    badgeSub:    "120+ happy clients",
+    badgeIcon:  "⭐",
+    badgeText:  "Trusted since 2021",          // e.g. "Trusted since 2021"
+    badgeSub:   "Growing client base",         // e.g. "120+ happy clients"
 
-    // Three bullet points — your values or strengths
     points: [
       "Professional and reliable — we show up on time, every time.",
       "Transparent pricing — no hidden fees, ever.",
@@ -94,61 +89,65 @@ const content = {
   },
 
   // ----------------------------------------------------------
-  //  SERVICES SECTION
-  //  Add up to 3 services. Change icon to any emoji.
+  //  SERVICES — up to 3. Change icon to any emoji.
   // ----------------------------------------------------------
   services: {
     intro: "Everything you need, handled professionally. Not sure what you need? WhatsApp us — we'll advise you for free.",
     items: [
       {
         icon:  "🎯",
-        name:  "Service One",          // e.g. "Haircut & Styling"
-        desc:  "Describe what this service includes, who it's for, and what the client will get. Keep it to 2–3 sentences.",
+        name:  "Service One",          // e.g. "Logo Design"
+        desc:  "Describe what this service includes, who it's for, and what the client will get. Keep it to 2 sentences.",
         price: "From RM 50",           // e.g. "From RM 80" or "RM 150 flat"
       },
       {
         icon:  "⚡",
         name:  "Service Two",
-        desc:  "Describe what this service includes, who it's for, and what the client will get. Keep it to 2–3 sentences.",
+        desc:  "Describe what this service includes, who it's for, and what the client will get. Keep it to 2 sentences.",
         price: "From RM 80",
       },
       {
         icon:  "💎",
         name:  "Service Three",
-        desc:  "Describe what this service includes, who it's for, and what the client will get. Keep it to 2–3 sentences.",
+        desc:  "Describe what this service includes, who it's for, and what the client will get. Keep it to 2 sentences.",
         price: "From RM 120",
       },
     ],
   },
 
   // ----------------------------------------------------------
-  //  PORTFOLIO SECTION
-  //  Showcase your work. Add image paths or leave blank.
-  //  To add a photo: put file in /images/ folder,
+  //  PORTFOLIO — leave image: "" for placeholder boxes
+  //  To add a photo: drag file to /images/ folder,
   //  then set image: "images/your-photo.jpg"
   // ----------------------------------------------------------
   portfolio: {
-    intro: "A selection of work we're proud of. Every project is handled with the same level of care and attention to detail.",
+    intro: "A selection of work we're proud of. Every project is handled with care and attention to detail.",
     items: [
-      { title: "Project Title 1", category: "Category",  image: "" },
-      { title: "Project Title 2", category: "Category",  image: "" },
-      { title: "Project Title 3", category: "Category",  image: "" },
-      { title: "Project Title 4", category: "Category",  image: "" },
-      { title: "Project Title 5", category: "Category",  image: "" },
-      { title: "Project Title 6", category: "Category",  image: "" },
+      { title: "Project Title 1", category: "Category", image: "" },
+      { title: "Project Title 2", category: "Category", image: "" },
+      { title: "Project Title 3", category: "Category", image: "" },
+      { title: "Project Title 4", category: "Category", image: "" },
+      { title: "Project Title 5", category: "Category", image: "" },
+      { title: "Project Title 6", category: "Category", image: "" },
     ],
   },
 
   // ----------------------------------------------------------
-  //  TESTIMONIALS SECTION
-  //  Real quotes from real customers.
-  //  avatar: initials of the customer, e.g. "AM" for Ahmad Malik
+  //  TESTIMONIALS
+  //  Use real customer quotes. If you don't have any yet,
+  //  write what a happy customer would say — update later.
+  //  avatar: 2-letter initials e.g. "AM" for Ahmad Malik
+  //
+  //  googleReviewsUrl: paste your Google Reviews link here
+  //  Leave as "" to hide the button
   // ----------------------------------------------------------
   testimonials: {
     intro: "Real feedback from real clients. We let our work — and our clients — speak for us.",
+    googleReviewsUrl: "",   // e.g. "https://g.page/r/YOUR-GOOGLE-REVIEW-LINK"
+    googleReviewsLabel: "See all our Google Reviews",
     items: [
       {
-        quote:  "Write a genuine customer quote here. What problem did you solve for them? What were they happy about?",
+        quote:  "Write a genuine customer quote here. What problem did you solve? What were they happy about?",
         name:   "Client Name",
         role:   "Their Job / Business",
         avatar: "AB",
@@ -174,7 +173,7 @@ const content = {
   contact: {
     headline:  "Let's talk about your project",
     subtext:   "No forms. No waiting. Just send us a WhatsApp and we'll get back to you within a few hours.",
-    hours:     "Mon–Sat, 9am–6pm",
+    hours:     "Mon–Sat, 9am–6pm",   // e.g. "Mon–Fri, 9am–5pm" or "Daily, 8am–10pm"
     ctaTitle:  "Ready to get started?",
     ctaSub:    "Send us a WhatsApp right now. Tell us what you need and we'll give you a free quote within 24 hours.",
     ctaButton: "WhatsApp Us Now",
@@ -183,13 +182,14 @@ const content = {
 
   // ----------------------------------------------------------
   //  BRAND COLOUR
-  //  Change this hex code to your brand colour.
-  //  Need help picking? Try coolors.co — it's free.
+  //  Change ONLY the color field below to your hex code.
+  //  colorLight and colorDark are calculated automatically —
+  //  you never need to touch them.
+  //
+  //  Need a colour? Try coolors.co — free colour picker.
   // ----------------------------------------------------------
   brand: {
-    color:      "#DA7756",   // Your brand colour
-    colorLight: "#FDF0EC",   // Leave this — auto tint of brand colour
-    colorDark:  "#C05E3E",   // Leave this — auto dark of brand colour
+    color: "#DA7756",   // ← Change ONLY this to your brand colour hex code
   },
 
 };
