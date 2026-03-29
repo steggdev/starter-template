@@ -27,15 +27,6 @@ const content = {
     founded:   "2021",                // Year you started
     email:     "hello@yourbiz.com",   // Your email address
 
-    // ----------------------------------------------------------
-    //  LOGO
-    //  Option A — Image logo:
-    //    1. Drag your logo into the /images/ folder
-    //    2. Set logo: "images/logo.png"
-    //
-    //  Option B — Text logo (default):
-    //    Leave logo: "" — your business name shows instead
-    // ----------------------------------------------------------
     logo:       "",                   // e.g. "images/logo.png" or leave ""
     logoAlt:    "Your Business logo",
     logoHeight: 36,
@@ -47,25 +38,32 @@ const content = {
   },
 
   // ----------------------------------------------------------
+  //  SEO
+  //  metaDescription: shown in Google search results
+  //  ogImage: preview image when link is shared on WhatsApp,
+  //           Facebook, LinkedIn. Size: 1200 x 630px.
+  //           Create one free at canva.com, save as og-image.jpg
+  //           and drag it into the /images/ folder.
+  // ----------------------------------------------------------
+  seo: {
+    metaDescription: "Describe your business in 1–2 sentences. Include your city and end with a call to action like 'Contact us today.'",
+    ogImage: "images/og-image.jpg",  // leave as is, or change filename if different
+  },
+
+  // ----------------------------------------------------------
   //  HERO SECTION — the first thing visitors see
   // ----------------------------------------------------------
   hero: {
-    badge:        "Now accepting new clients",  // Pill text above headline
-    headline:     "We help businesses",         // First line of big headline
-    headlineEm:   "Your tagline here",          // Second line — in brand colour
+    badge:        "Now accepting new clients",
+    headline:     "We help businesses",
+    headlineEm:   "Your tagline here",
     subtext:      "We deliver professional, reliable service to clients. Tell us what you need — we'll make it happen.",
-
-    ctaPrimary:   "Get a Free Quote",           // Main button → links to WhatsApp
-    ctaSecondary: "See Our Services",           // Secondary button → scrolls down
-
-    // ----------------------------------------------------------
-    //  STATS ROW — 3 numbers shown below the hero buttons
-    //  Change the number and label to match your business
-    // ----------------------------------------------------------
+    ctaPrimary:   "Get a Free Quote",
+    ctaSecondary: "See Our Services",
     stats: [
-      { number: "120+", label: "Projects delivered" },  // e.g. "50+", "Projects delivered"
-      { number: "5★",   label: "Client satisfaction" }, // e.g. "5★", "Client satisfaction"
-      { number: "2021", label: "Founded" },             // e.g. "2021", "Founded"
+      { number: "120+", label: "Projects delivered" },
+      { number: "5★",   label: "Client satisfaction" },
+      { number: "2021", label: "Founded" },
     ],
   },
 
@@ -76,11 +74,9 @@ const content = {
     ownerName:  "Your Name",
     headline:   "We care about your results",
     subtext:    "Hi, I'm [YOUR NAME]. I started [BUSINESS NAME] because I believe every business deserves quality service without the hassle. Based in [YOUR CITY], we work with clients who value reliability and results.",
-
     badgeIcon:  "⭐",
-    badgeText:  "Trusted since 2021",          // e.g. "Trusted since 2021"
-    badgeSub:   "Growing client base",         // e.g. "120+ happy clients"
-
+    badgeText:  "Trusted since 2021",
+    badgeSub:   "Growing client base",
     points: [
       "Professional and reliable — we show up on time, every time.",
       "Transparent pricing — no hidden fees, ever.",
@@ -96,9 +92,9 @@ const content = {
     items: [
       {
         icon:  "🎯",
-        name:  "Service One",          // e.g. "Logo Design"
+        name:  "Service One",
         desc:  "Describe what this service includes, who it's for, and what the client will get. Keep it to 2 sentences.",
-        price: "From RM 50",           // e.g. "From RM 80" or "RM 150 flat"
+        price: "From RM 50",
       },
       {
         icon:  "⚡",
@@ -117,8 +113,7 @@ const content = {
 
   // ----------------------------------------------------------
   //  PORTFOLIO — leave image: "" for placeholder boxes
-  //  To add a photo: drag file to /images/ folder,
-  //  then set image: "images/your-photo.jpg"
+  //  To add a photo: drag file to /images/, set image: "images/filename.jpg"
   // ----------------------------------------------------------
   portfolio: {
     intro: "A selection of work we're proud of. Every project is handled with care and attention to detail.",
@@ -134,16 +129,12 @@ const content = {
 
   // ----------------------------------------------------------
   //  TESTIMONIALS
-  //  Use real customer quotes. If you don't have any yet,
-  //  write what a happy customer would say — update later.
   //  avatar: 2-letter initials e.g. "AM" for Ahmad Malik
-  //
-  //  googleReviewsUrl: paste your Google Reviews link here
-  //  Leave as "" to hide the button
+  //  googleReviewsUrl: your Google Reviews link, or leave ""
   // ----------------------------------------------------------
   testimonials: {
     intro: "Real feedback from real clients. We let our work — and our clients — speak for us.",
-    googleReviewsUrl: "",   // e.g. "https://g.page/r/YOUR-GOOGLE-REVIEW-LINK"
+    googleReviewsUrl: "",
     googleReviewsLabel: "See all our Google Reviews",
     items: [
       {
@@ -173,7 +164,7 @@ const content = {
   contact: {
     headline:  "Let's talk about your project",
     subtext:   "No forms. No waiting. Just send us a WhatsApp and we'll get back to you within a few hours.",
-    hours:     "Mon–Sat, 9am–6pm",   // e.g. "Mon–Fri, 9am–5pm" or "Daily, 8am–10pm"
+    hours:     "Mon–Sat, 9am–6pm",
     ctaTitle:  "Ready to get started?",
     ctaSub:    "Send us a WhatsApp right now. Tell us what you need and we'll give you a free quote within 24 hours.",
     ctaButton: "WhatsApp Us Now",
@@ -182,10 +173,8 @@ const content = {
 
   // ----------------------------------------------------------
   //  BRAND COLOUR
-  //  Change ONLY the color field below to your hex code.
-  //  colorLight and colorDark are calculated automatically —
-  //  you never need to touch them.
-  //
+  //  Change ONLY the color field to your hex code.
+  //  Light and dark variants are calculated automatically.
   //  Need a colour? Try coolors.co — free colour picker.
   // ----------------------------------------------------------
   brand: {

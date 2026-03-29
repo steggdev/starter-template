@@ -79,9 +79,13 @@ document.documentElement.style.setProperty('--brand-text',  colorText);
 // Auto-fill SEO meta tags from content.js
 document.title = `${content.business.name} — ${content.hero.headlineEm}`;
 document.querySelector('meta[name="description"]')
-  ?.setAttribute('content', `${content.business.name} offers professional services in ${content.business.city}. ${content.hero.subtext}`);
+  ?.setAttribute('content', content.seo?.metaDescription || `${content.business.name} — ${content.hero.subtext}`);
 document.querySelector('meta[property="og:title"]')
   ?.setAttribute('content', content.business.name);
+document.querySelector('meta[property="og:description"]')
+  ?.setAttribute('content', content.seo?.metaDescription || '');
+document.querySelector('meta[property="og:image"]')
+  ?.setAttribute('content', content.seo?.ogImage || '');
 
 // Smooth anchor scroll — accounts for sticky nav height
 document.addEventListener('click', e => {
