@@ -3,6 +3,11 @@ import content from '../data/content.js';
 const { portfolio, brand } = content;
 
 export function renderPortfolio() {
+  // If show is false, return empty fragment — section is hidden entirely
+  if (portfolio.show === false) {
+    return document.createDocumentFragment();
+  }
+
   const section = document.createElement('section');
   section.id = 'portfolio';
   section.style.cssText = 'padding: 88px 0; background: #FAFAFA;';

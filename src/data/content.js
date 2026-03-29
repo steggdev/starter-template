@@ -27,7 +27,9 @@ const content = {
     founded:   "2021",                // Year you started
     email:     "hello@yourbiz.com",   // Your email address
 
-    logo:       "",                   // e.g. "images/logo.png" or leave ""
+    // No logo? Leave logo as "" — your business name shows in the nav instead.
+    // Have a logo? 1) Rename file to logo.png  2) Drag into /images/  3) Change "" to "images/logo.png"
+    logo:       "",                   // ← change to "images/logo.png" after adding your logo
     logoAlt:    "Your Business logo",
     logoHeight: 36,
 
@@ -47,13 +49,17 @@ const content = {
   // ----------------------------------------------------------
   seo: {
     metaDescription: "Describe your business in 1–2 sentences. Include your city and end with a call to action like 'Contact us today.'",
-    ogImage: "images/og-image.jpg",  // leave as is, or change filename if different
+    ogImage: "images/og-image.jpg",  // rename your social preview image to og-image.jpg and drag into /images/
   },
 
   // ----------------------------------------------------------
   //  HERO SECTION — the first thing visitors see
   // ----------------------------------------------------------
   hero: {
+    // heroImage: drag your photo into /images/ and set the filename here
+    // Leave as "" to show a clean placeholder box instead
+    heroImage: "images/hero.jpg",   // rename your photo to hero.jpg and drag into /images/
+
     badge:        "Now accepting new clients",
     headline:     "We help businesses",
     headlineEm:   "Your tagline here",
@@ -71,6 +77,9 @@ const content = {
   //  ABOUT SECTION
   // ----------------------------------------------------------
   about: {
+    // aboutImage: drag your photo into /images/ and set the filename here
+    // Leave as "" to show a clean placeholder box instead
+    aboutImage: "images/about.jpg",   // rename your photo to about.jpg and drag into /images/
     ownerName:  "Your Name",
     headline:   "We care about your results",
     subtext:    "Hi, I'm [YOUR NAME]. I started [BUSINESS NAME] because I believe every business deserves quality service without the hassle. Based in [YOUR CITY], we work with clients who value reliability and results.",
@@ -114,16 +123,22 @@ const content = {
   // ----------------------------------------------------------
   //  PORTFOLIO — leave image: "" for placeholder boxes
   //  To add a photo: drag file to /images/, set image: "images/filename.jpg"
+  //
+  //  show: true  → portfolio section is visible
+  //  show: false → portfolio section is hidden (good if you have no work yet)
   // ----------------------------------------------------------
   portfolio: {
+    show: true,   // ← set to false to hide this entire section
     intro: "A selection of work we're proud of. Every project is handled with care and attention to detail.",
     items: [
-      { title: "Project Title 1", category: "Category", image: "" },
-      { title: "Project Title 2", category: "Category", image: "" },
-      { title: "Project Title 3", category: "Category", image: "" },
-      { title: "Project Title 4", category: "Category", image: "" },
-      { title: "Project Title 5", category: "Category", image: "" },
-      { title: "Project Title 6", category: "Category", image: "" },
+      // Rename your photos to match these filenames exactly, then drag into /images/
+      // Leave image: "" for any you don't have yet — shows a clean placeholder
+      { title: "Project Title 1", category: "Category", image: "images/project-1.jpg" },
+      { title: "Project Title 2", category: "Category", image: "images/project-2.jpg" },
+      { title: "Project Title 3", category: "Category", image: "images/project-3.jpg" },
+      { title: "Project Title 4", category: "Category", image: "images/project-4.jpg" },
+      { title: "Project Title 5", category: "Category", image: "images/project-5.jpg" },
+      { title: "Project Title 6", category: "Category", image: "images/project-6.jpg" },
     ],
   },
 

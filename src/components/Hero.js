@@ -40,11 +40,16 @@ export function renderHero() {
             `).join('')}
           </div>
         </div>
-        <div class="reveal reveal-delay-2" style="border-radius:24px;overflow:hidden;aspect-ratio:4/3;background:#F4F4F5;box-shadow:0 8px 32px rgba(0,0,0,0.09);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#9CA3AF;font-size:14px;">
-          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="opacity:.4">
-            <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
-          </svg>
-          Add your photo here
+        <div class="reveal reveal-delay-2" style="border-radius:24px;overflow:hidden;aspect-ratio:4/3;background:#F4F4F5;box-shadow:0 8px 32px rgba(0,0,0,0.09);">
+          ${hero.heroImage
+            ? `<img src="${hero.heroImage}" alt="${business.name}" style="width:100%;height:100%;object-fit:cover;display:block;" />`
+            : `<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#9CA3AF;font-size:14px;">
+                <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="opacity:.4">
+                  <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+                </svg>
+                Add your photo here
+              </div>`
+          }
         </div>
       </div>
     </div>
