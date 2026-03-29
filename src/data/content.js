@@ -27,9 +27,9 @@ const content = {
     founded:   "2021",                // Year you started
     email:     "hello@yourbiz.com",   // Your email address
 
-    // No logo? Leave logo as "" — your business name shows in the nav instead.
-    // Have a logo? 1) Rename file to logo.png  2) Drag into /images/  3) Change "" to "images/logo.png"
-    logo:       "",                   // ← change to "images/logo.png" after adding your logo
+    // Logo: rename your file to logo.png and drag it into the /images/ folder
+    // No logo? No problem — your business name shows automatically if logo.png is missing
+    logo:       "images/logo.png",
     logoAlt:    "Your Business logo",
     logoHeight: 36,
 

@@ -2,15 +2,17 @@ import content from '../data/content.js';
 const { business, brand } = content;
 
 function logoHTML() {
-  if (business.logo) {
-    return `<img src="${business.logo}" alt="${business.logoAlt||business.name}"
-      style="height:${business.logoHeight||36}px;width:auto;display:block;object-fit:contain;filter:brightness(0) invert(1);opacity:.9;margin:0 auto 12px;" />`;
-  }
-  const highlighted = business.name.replace(
-    business.nameAccent,
-    `<span style="color:${brand.color}">${business.nameAccent}</span>`
-  );
-  return `<div style="font-size:18px;font-weight:600;color:#fff;letter-spacing:-.02em;margin-bottom:8px;">${highlighted}</div>`;
+  // Renders img — onerror falls back to text name if logo.png is missing
+  return `
+    <div style="margin-bottom:12px;">
+      <img src="${business.logo}" alt="${business.logoAlt||business.name}"
+        style="height:${business.logoHeight||36}px;width:auto;display:block;object-fit:contain;filter:brightness(0) invert(1);opacity:.9;margin:0 auto;"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+      <div style="display:none;font-size:18px;font-weight:600;color:#fff;letter-spacing:-.02em;">
+        ${business.name.replace(business.nameAccent,`<span style="color:${brand.color}">${business.nameAccent}</span>`)}
+      </div>
+    </div>
+  `;
 }
 
 export function renderFooter() {

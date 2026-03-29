@@ -2,16 +2,26 @@ import content from '../data/content.js';
 
 const { business, brand } = content;
 
-function logoHTML(extraStyle = '') {
-  if (business.logo) {
-    return `<img src="${business.logo}" alt="${business.logoAlt || business.name}"
-      style="height:${business.logoHeight || 36}px;width:auto;display:block;object-fit:contain;${extraStyle}" />`;
-  }
+function textLogo(extraStyle = '') {
   const highlighted = business.name.replace(
     business.nameAccent,
     `<span style="color:${brand.color}">${business.nameAccent}</span>`
   );
   return `<span style="font-size:18px;font-weight:600;letter-spacing:-.02em;color:#1A1A1A;${extraStyle}">${highlighted}</span>`;
+}
+
+function logoHTML(extraStyle = '') {
+  // Always render img tag — onerror falls back to text logo if file missing
+  return `
+    <span class="logo-wrap" style="display:inline-flex;align-items:center;">
+      <img src="${business.logo}" alt="${business.logoAlt || business.name}"
+        style="height:${business.logoHeight || 36}px;width:auto;display:block;object-fit:contain;${extraStyle}"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='inline';" />
+      <span style="display:none;font-size:18px;font-weight:600;letter-spacing:-.02em;color:#1A1A1A;${extraStyle}">
+        ${business.name.replace(business.nameAccent, `<span style="color:${brand.color}">${business.nameAccent}</span>`)}
+      </span>
+    </span>
+  `;
 }
 
 export function renderNav() {
